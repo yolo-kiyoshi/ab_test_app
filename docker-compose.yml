@@ -1,0 +1,11 @@
+version: '3'
+services:
+  eda:
+    build: ./
+    user: root
+    volumes:
+      - ./:/app
+    working_dir: /app
+    ports:
+      - "8501:8501"
+    command: streamlit run main.py
